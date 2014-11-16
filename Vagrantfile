@@ -11,4 +11,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     v.customize ["modifyvm", :id, "--vram", "256"]
   end
 
+  config.vm.provision "file", source: "./workstation-setup/shell/.prompt", destination: "/home/vagrant/.prompt"
+  config.vm.provision "file", source: "./workstation-setup/shell/.bashrc", destination: "/home/vagrant/.bashrc"
+  config.vm.provision "shell", path: "./provision-scripts/main.sh"
+
 end
