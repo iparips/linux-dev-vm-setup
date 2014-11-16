@@ -1,0 +1,3 @@
+[submodule "workstation-setup"]
+	path = workstation-setup
+	url = https://github.com/iparips/workstation-setup.git
