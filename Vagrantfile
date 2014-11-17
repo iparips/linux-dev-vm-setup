@@ -13,6 +13,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.provision "file", source: "./workstation-setup/shell/.prompt", destination: "/home/vagrant/.prompt"
   config.vm.provision "file", source: "./workstation-setup/shell/.bashrc", destination: "/home/vagrant/.bashrc"
+  config.vm.provision "file", source: "./workstation-setup/shell/terminalrc", destination: "/home/vagrant/.config/xfce4/terminal/terminalrc"
   config.vm.provision "shell", path: "./provision-scripts/main.sh"
 
 end

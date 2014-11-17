@@ -8,9 +8,10 @@ user_home=/home/vagrant
 # apt-get -y update
 sudo apt-get -y install build-essential dos2unix git
 
-# make bashrc and prompt usable in Linux
+# make provisioned files usable in Linux
 dos2unix ${user_home}/.bashrc
 dos2unix ${user_home}/.prompt
+dos2unix ${user_home}/.config/xfce4/terminal/terminalrc
 
 # install ruby-install
 wget -O ruby-install-0.5.0.tar.gz https://github.com/postmodern/ruby-install/archive/v0.5.0.tar.gz
