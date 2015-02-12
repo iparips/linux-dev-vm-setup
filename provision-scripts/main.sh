@@ -3,9 +3,9 @@
 # break on error, verbose
 set -e -x
 
-user_home=/home/vagrant 
+user_home=/home/vagrant
 
-# apt-get -y update
+apt-get -y update
 sudo apt-get -y install build-essential dos2unix git
 
 # make provisioned files usable in Linux
@@ -20,8 +20,8 @@ cd ruby-install-0.5.0/
 sudo make install
 
 # install ruby
-rm -rf ${user_home}/.rubies 
-mkdir ${user_home}/.rubies  
+rm -rf ${user_home}/.rubies
+mkdir ${user_home}/.rubies
 ruby-install -r ${user_home}/.rubies ruby 2.1.5
 
 # install chruby
@@ -32,4 +32,4 @@ sudo make install
 
 # install sublime text
 sudo add-apt-repository ppa:webupd8team/sublime-text-3
-sudo apt-get install sublime-text 
+sudo apt-get install sublime-text
